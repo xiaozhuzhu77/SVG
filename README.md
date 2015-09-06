@@ -22,6 +22,32 @@
 * SVG 是开放的标准
 * SVG 文件是纯粹的 XML
 ```
+## Canvas 和 SVG 的区别：
+　　###SVG
+```
+　　　　SVG 是一种使用 XML 描述 2D 图形的语言。
+　　　　SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。您可以为某个元素附加 JavaScript 事件处理器。
+　　　　在 SVG 中，每个被绘制的图形均被视为对象。如果 SVG 对象的属性发生变化，那么浏览器能够自动重现图形。
+　　　　特点：
+　　　　	　　不依赖分辨率
+　　　　	　　支持事件处理器
+　　　　	　　最适合带有大型渲染区域的应用程序（比如谷歌地图）
+　　　　　　	复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快）
+　　　　	　　不适合游戏应用
+```
+　　###Canvas
+```
+　　　　Canvas 通过 JavaScript 来绘制 2D 图形。
+　　　　Canvas 是逐像素进行渲染的。
+　　　　在 canvas 中，一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。
+　　　　特点：
+　　　    　　依赖分辨率
+　　　　	　　不支持事件处理器
+　　　　　　	弱的文本渲染能力
+　　　　　　	能够以 .png 或 .jpg 格式保存结果图像
+　　　　	　　最适合图像密集型的游戏，其中的许多对象会被频繁重绘
+```
+
 SVG 的主要竞争者是 Flash。
 与 Flash 相比，SVG 最大的优势是与其他标准（比如 XSL 和 DOM）相兼容。而 Flash 则是未开源的私有技术。
 ## SVG 实例
@@ -43,7 +69,7 @@ stroke-width="2" fill="red"/>
 第一行包含了 XML 声明。请注意 standalone 属性！该属性规定此 SVG 文件是否是“独立的”，或含有对外部文件的引用。
 standalone="no" 意味着 SVG 文档会引用一个外部文件 - 在这里，是 DTD 文件。     
 
-第二和第三行引用了这个外部的 SVG DTD。该 DTD 位于 “http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd”。该 DTD 位于 W3C，含有所有允许的 SVG 元素。      
+第二和第三行引用了这个外部的 SVG DTD。该 DTD 位于 “http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd”。 该 DTD 位于 W3C，含有所有允许的 SVG 元素。      
 
 SVG 代码以 <svg> 元素开始，包括开启标签 <svg> 和关闭标签 </svg> 。这是根元素。width 和 height 属性可设置此 SVG 文档的宽度和高度。version 属性可定义所使用的 SVG 版本，xmlns 属性可定义 SVG 命名空间。   
 
@@ -54,3 +80,56 @@ stroke 和 stroke-width 属性控制如何显示形状的轮廓。我们把圆�
 fill 属性设置形状内的颜色。我们把填充颜色设置为红色。
 
 关闭标签的作用是关闭 SVG 元素和文档本身。
+
+```
+   <svg width="100%" height="100%"  >
+
+        <circle cx="300" cy="60" r="50" stroke="#ff0" stroke-width="3" fill="red" />
+
+    </svg>
+```
+   <svg width="100%" height="100%"  >
+
+        <circle cx="300" cy="60" r="50" stroke="#ff0" stroke-width="3" fill="red" />
+
+    </svg>
+    
+## HTML 页面中的 SVG
+SVG 文件可通过以下标签嵌入 HTML 文档：<embed>、<object> 或者 <iframe>。
+
+#### 使用 <embed> 标签
+
+<embed> 标签被所有主流的浏览器支持，并允许使用脚本。
+
+当在 HTML 页面中嵌入 SVG 时使用 <embed> 标签是 Adobe SVG Viewer 推荐的方法！然而，如果需要创建合法的 XHTML，就不能使用 <embed>。任何 HTML 规范中都没有 <embed> 标签。
+
+*语法*
+```
+<embed src="rect.svg" width="300" height="100" 
+type="image/svg+xml"
+pluginspage="http://www.adobe.com/svg/viewer/install/" />
+```
+pluginspage 属性指向下载插件的 URL。
+
+
+#### 使用 <object> 标签
+
+<object> 标签是 HTML 4 的标准标签，被所有较新的浏览器支持。它的缺点是不允许使用脚本。
+
+假如您安装了最新版本的 Adobe SVG Viewer，那么当使用 <object> 标签时 SVG 文件无法工作（至少不能在 IE 中工作）！
+
+*语法*
+```
+<object data="rect.svg" width="300" height="100" 
+type="image/svg+xml"
+codebase="http://www.adobe.com/svg/viewer/install/" />
+```
+codebase 属性指向下载插件的 URL。
+
+####使用 <iframe> 标签
+<iframe> 标签可工作在大部分的浏览器中。
+*语法*
+```
+<iframe src="rect.svg" width="300" height="100">
+</iframe>
+```
