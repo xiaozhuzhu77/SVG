@@ -73,9 +73,9 @@ standalone="no" 意味着 SVG 文档会引用一个外部文件 - 在这里，�
 
 第二和第三行引用了这个外部的 SVG DTD。该 DTD 位于 “http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd”。 该 DTD 位于 W3C，含有所有允许的 SVG 元素。      
 
-SVG 代码以 <svg> 元素开始，包括开启标签 <svg> 和关闭标签 </svg> 。这是根元素。width 和 height 属性可设置此 SVG 文档的宽度和高度。version 属性可定义所使用的 SVG 版本，xmlns 属性可定义 SVG 命名空间。   
+SVG 代码以 `<svg>` 元素开始，包括开启标签 <svg> 和关闭标签 `</svg>` 。这是根元素。width 和 height 属性可设置此 SVG 文档的宽度和高度。version 属性可定义所使用的 SVG 版本，xmlns 属性可定义 SVG 命名空间。   
 
-SVG 的 <circle> 用来创建一个圆。cx 和 cy 属性定义圆中心的 x 和 y 坐标。如果忽略这两个属性，那么圆点会被设置为 (0, 0)。r 属性定义圆的半径。    
+SVG 的 `<circle>` 用来创建一个圆。cx 和 cy 属性定义圆中心的 x 和 y 坐标。如果忽略这两个属性，那么圆点会被设置为 (0, 0)。r 属性定义圆的半径。    
 
 stroke 和 stroke-width 属性控制如何显示形状的轮廓。我们把圆的轮廓设置为 2px 宽，黑边框。
 
@@ -83,28 +83,22 @@ fill 属性设置形状内的颜色。我们把填充颜色设置为红色。
 
 关闭标签的作用是关闭 SVG 元素和文档本身。
 
-```
-<svg width="100%" height="100%"  >
+
+```<svg width="100%" height="100%"  >
 
     <circle cx="300" cy="60" r="50" stroke="#ff0" stroke-width="3" fill="red" />
 
 </svg>
 ```
-   
-<svg width="100%" height="100%"  >
-
-    <circle cx="300" cy="60" r="50" stroke="#ff0" stroke-width="3" fill="red" />
-
-</svg>
     
 ## HTML 页面中的 SVG
-SVG 文件可通过以下标签嵌入 HTML 文档：<embed>、<object> 或者 <iframe>。
+SVG 文件可通过以下标签嵌入 HTML 文档：`<embed>`、`<object>` 或者 `<iframe>`。
 
-#### 使用 <embed> 标签
+#### 使用 `<embed>` 标签
 
-<embed> 标签被所有主流的浏览器支持，并允许使用脚本。
+`<embed>` 标签被所有主流的浏览器支持，并允许使用脚本。
 
-当在 HTML 页面中嵌入 SVG 时使用 <embed> 标签是 Adobe SVG Viewer 推荐的方法！然而，如果需要创建合法的 XHTML，就不能使用 <embed>。任何 HTML 规范中都没有 <embed> 标签。
+当在 HTML 页面中嵌入 SVG 时使用 `<embed>` 标签是 Adobe SVG Viewer 推荐的方法！然而，如果需要创建合法的 XHTML，就不能使用 <embed>。任何 HTML 规范中都没有 <embed> 标签。
 
 *语法*
 ```
@@ -115,11 +109,11 @@ pluginspage="http://www.adobe.com/svg/viewer/install/" />
 pluginspage 属性指向下载插件的 URL。
 
 
-#### 使用 <object> 标签
+#### 使用 `<object>` 标签
 
-<object> 标签是 HTML 4 的标准标签，被所有较新的浏览器支持。它的缺点是不允许使用脚本。
+`<object>` 标签是 HTML 4 的标准标签，被所有较新的浏览器支持。它的缺点是不允许使用脚本。
 
-假如您安装了最新版本的 Adobe SVG Viewer，那么当使用 <object> 标签时 SVG 文件无法工作（至少不能在 IE 中工作）！
+假如您安装了最新版本的 Adobe SVG Viewer，那么当使用 `<object>` 标签时 SVG 文件无法工作（至少不能在 IE 中工作）！
 
 *语法*
 ```
@@ -129,8 +123,8 @@ codebase="http://www.adobe.com/svg/viewer/install/" />
 ```
 codebase 属性指向下载插件的 URL。
 
-####使用 <iframe> 标签
-<iframe> 标签可工作在大部分的浏览器中。
+####使用 `<iframe>` 标签
+`<iframe>` 标签可工作在大部分的浏览器中。
 
 *语法*
 ```
