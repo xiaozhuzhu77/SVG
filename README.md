@@ -84,21 +84,16 @@ fill 属性设置形状内的颜色。我们把填充颜色设置为红色。
 关闭标签的作用是关闭 SVG 元素和文档本身。
 
 
-```<svg width="100%" height="100%"  >
-
-    <circle cx="300" cy="60" r="50" stroke="#ff0" stroke-width="3" fill="red" />
-
-</svg>
-```
     
 ## HTML 页面中的 SVG
+
 SVG 文件可通过以下标签嵌入 HTML 文档：`<embed>`、`<object>` 或者 `<iframe>`。
 
 #### 使用 `<embed>` 标签
 
 `<embed>` 标签被所有主流的浏览器支持，并允许使用脚本。
 
-当在 HTML 页面中嵌入 SVG 时使用 `<embed>` 标签是 Adobe SVG Viewer 推荐的方法！然而，如果需要创建合法的 XHTML，就不能使用 <embed>。任何 HTML 规范中都没有 <embed> 标签。
+当在 HTML 页面中嵌入 SVG 时使用 `<embed>` 标签是 Adobe SVG Viewer 推荐的方法！然而，如果需要创建合法的 XHTML，就不能使用 `<embed>`。任何 HTML 规范中都没有 `<embed>` 标签。
 
 *语法*
 ```
