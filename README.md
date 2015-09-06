@@ -24,7 +24,6 @@
 ```
 ## Canvas 和 SVG 的区别：
 ### SVG
-```
 　SVG 是一种使用 XML 描述 2D 图形的语言。
 　SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。您可以为某个元素附加 JavaScript 事件处理器。
 　在 SVG 中，每个被绘制的图形均被视为对象。如果 SVG 对象的属性发生变化，那么浏览器能够自动重现图形。
@@ -34,9 +33,7 @@
 　　　 最适合带有大型渲染区域的应用程序（比如谷歌地图）
 　　　 复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快）
 　　　 不适合游戏应用
-```
 ###Canvas
-```
 　Canvas 通过 JavaScript 来绘制 2D 图形。
 　Canvas 是逐像素进行渲染的。
 　在 canvas 中，一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。
@@ -46,14 +43,11 @@
 　　　 弱的文本渲染能力
 　　　 能够以 .png 或 .jpg 格式保存结果图像
 　　　 最适合图像密集型的游戏，其中的许多对象会被频繁重绘
-```
 
 SVG 的主要竞争者是 Flash。
 与 Flash 相比，SVG 最大的优势是与其他标准（比如 XSL 和 DOM）相兼容。而 Flash 则是未开源的私有技术。
 
 ##SVG 实例
-
-```
 <?xml version="1.0" standalone="no"?>
 
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
@@ -65,7 +59,6 @@ xmlns="http://www.w3.org/2000/svg">
 <circle cx="100" cy="50" r="40" stroke="black"
 stroke-width="2" fill="red"/>
 </svg>
-```
 
 ######代码解释：
 第一行包含了 XML 声明。请注意 standalone 属性！该属性规定此 SVG 文件是否是“独立的”，或含有对外部文件的引用。
@@ -86,16 +79,16 @@ fill 属性设置形状内的颜色。我们把填充颜色设置为红色。
 ```
 <svg width="100%" height="100%"  >
 
-        <circle cx="300" cy="60" r="50" stroke="#ff0" stroke-width="3" fill="red" />
+    <circle cx="300" cy="60" r="50" stroke="#ff0" stroke-width="3" fill="red" />
 
-    </svg>
-    ```
-    
-   <svg width="100%" height="100%"  >
+</svg>
+```
+   
+<svg width="100%" height="100%"  >
 
-        <circle cx="300" cy="60" r="50" stroke="#ff0" stroke-width="3" fill="red" />
+    <circle cx="300" cy="60" r="50" stroke="#ff0" stroke-width="3" fill="red" />
 
-    </svg>
+</svg>
     
 ## HTML 页面中的 SVG
 SVG 文件可通过以下标签嵌入 HTML 文档：<embed>、<object> 或者 <iframe>。
