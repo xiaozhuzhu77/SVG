@@ -1,6 +1,7 @@
 # SVG 可缩放矢量图形（Scalable Vector Graphics）
 
 ##  什么是SVG？
+
 ```
 * SVG 指可伸缩矢量图形 (Scalable Vector Graphics)
 * SVG 用来定义用于网络的基于矢量的图形
@@ -9,7 +10,9 @@
 * SVG 是万维网联盟的标准
 * SVG 与诸如 DOM 和 XSL 之类的 W3C 标准是一个整体
 ```
+
 ## SVG 的优势
+
 与其他图像格式相比，使用 SVG 的优势在于：
 ```
 * SVG 可被非常多的工具读取和修改（比如记事本）
@@ -23,7 +26,9 @@
 * SVG 文件是纯粹的 XML
 ```
 ## Canvas 和 SVG 的区别：
+
 ### SVG
+
 ```
 　SVG 是一种使用 XML 描述 2D 图形的语言。
 　SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。您可以为某个元素附加 JavaScript
@@ -36,7 +41,9 @@
 　　　 复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快）
 　　　 不适合游戏应用
 ```
+
 ###Canvas
+
 ```
 　Canvas 通过 JavaScript 来绘制 2D 图形。
 　Canvas 是逐像素进行渲染的。
@@ -54,6 +61,7 @@ SVG 的主要竞争者是 Flash。
 与 Flash 相比，SVG 最大的优势是与其他标准（比如 XSL 和 DOM）相兼容。而 Flash 则是未开源的私有技术。
 
 ##SVG 实例
+
 ```
 <?xml version="1.0" standalone="no"?>
 
@@ -68,6 +76,7 @@ stroke-width="2" fill="red"/>
 </svg>
 ```
 ######代码解释：
+
 第一行包含了 XML 声明。请注意 standalone 属性！该属性规定此 SVG 文件是否是“独立的”，或含有对外部文件的引用。
 standalone="no" 意味着 SVG 文档会引用一个外部文件 - 在这里，是 DTD 文件。     
 
@@ -95,7 +104,8 @@ SVG 文件可通过以下标签嵌入 HTML 文档：`<embed>`、`<object>` 或�
 
 当在 HTML 页面中嵌入 SVG 时使用 `<embed>` 标签是 Adobe SVG Viewer 推荐的方法！然而，如果需要创建合法的 XHTML，就不能使用 `<embed>`。任何 HTML 规范中都没有 `<embed>` 标签。
 
-####语法
+#####语法：
+
 ```
 <embed src="rect.svg" width="300" height="100" 
 type="image/svg+xml"
@@ -110,7 +120,7 @@ pluginspage 属性指向下载插件的 URL。
 
 假如您安装了最新版本的 Adobe SVG Viewer，那么当使用 `<object>` 标签时 SVG 文件无法工作（至少不能在 IE 中工作）！
 
-####语法
+#####语法：
 ```
 <object data="rect.svg" width="300" height="100" 
 type="image/svg+xml"
@@ -119,9 +129,11 @@ codebase="http://www.adobe.com/svg/viewer/install/" />
 codebase 属性指向下载插件的 URL。
 
 ###使用 `<iframe>` 标签
+
 `<iframe>` 标签可工作在大部分的浏览器中。
 
-####语法
+#####语法：
+
 ```
 <iframe src="rect.svg" width="300" height="100">
 </iframe>
