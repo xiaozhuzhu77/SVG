@@ -408,7 +408,7 @@ points 属性定义多边形每个角的 x 和 y 坐标
 
 </svg>
 ```
-[](http://7sbohv.com1.z0.glb.clouddn.com/feblend.png)
+![](http://7sbohv.com1.z0.glb.clouddn.com/feblend.png)
 
 [查看效果](http://codepen.io/xiaozhuzhu77/pen/Xmbeoz)
 
@@ -447,7 +447,7 @@ points 属性定义多边形每个角的 x 和 y 坐标
     </g> 
 </svg>
 ```
-[](http://7sbohv.com1.z0.glb.clouddn.com/fecolormatrix.png)
+![](http://7sbohv.com1.z0.glb.clouddn.com/fecolormatrix.png)
 
 [查看效果](http://codepen.io/xiaozhuzhu77/pen/KdpXJN)
 
@@ -502,7 +502,7 @@ points 属性定义多边形每个角的 x 和 y 坐标
     </g>
 </svg>
 ```
-[](http://7sbohv.com1.z0.glb.clouddn.com/fecomponenttransfer.png)
+![](http://7sbohv.com1.z0.glb.clouddn.com/fecomponenttransfer.png)
 
 [查看效果](http://codepen.io/xiaozhuzhu77/pen/qOdPgy)
 
@@ -609,7 +609,7 @@ points 属性定义多边形每个角的 x 和 y 坐标
 
 </svg>
 ```
-[](http://7sbohv.com1.z0.glb.clouddn.com/femerge.png)
+![](http://7sbohv.com1.z0.glb.clouddn.com/femerge.png)
 
 [查看效果](http://codepen.io/xiaozhuzhu77/pen/bVdoZV)
 
@@ -652,7 +652,7 @@ points 属性定义多边形每个角的 x 和 y 坐标
 
 </svg>
 ```
-[](http://7sbohv.com1.z0.glb.clouddn.com/femorphology.png)
+![](http://7sbohv.com1.z0.glb.clouddn.com/femorphology.png)
 
 [查看效果](http://codepen.io/xiaozhuzhu77/pen/rOVGRG)
 
