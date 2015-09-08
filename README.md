@@ -228,9 +228,8 @@ r 属性定义圆的半径。
 
 ###`<polygon>` 标签
 `<polygon>` 标签用来创建含有不少于三个边的图形（即，多边形）。
-```
 #### 三角形
-
+```
 <svg width="100%" height="100%">
 
     <polygon points="220,100 300,210 170,250"
@@ -259,7 +258,8 @@ points 属性定义多边形每个角的 x 和 y 坐标
     <svg class="clip-svg">
         <defs>
             <clipPath id="hexagon-clip" clipPathUnits="objectBoundingBox">
-                <polygon points="0.25 0.05, 0.75 0.05, 1 0.5, 0.75 0.95, 0.25 0.95, 0 0.5" />
+                <polygon points="0.25 0.05, 0.75 0.05, 1 0.5, 0.75 0.95,
+                 0.25 0.95, 0 0.5" />
             </clipPath>
         </defs>
     </svg>
