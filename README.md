@@ -443,25 +443,25 @@ points 属性定义多边形每个角的 x 和 y 坐标
 
 ```
 <svg width="100%" height="100%">
-        <defs>
-            <linearGradient id="orange_red" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style="stop-color:rgb(255,255,0);
+    <defs>
+        <linearGradient id="orange_red" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:rgb(255,255,0);
                             stop-opacity:1">
-    
-                </stop>
-                <stop offset="100%" style="stop-color:rgb(255,0,0);
-                            stop-opacity:1">
-    
-                </stop>
-            </linearGradient>
-        </defs>
-    
-        <ellipse cx="200" cy="190" rx="85" ry="55"
-                 style="fill:url(#orange_red)">
-    
-        </ellipse>
 
-    </svg>
+            </stop>
+            <stop offset="100%" style="stop-color:rgb(255,0,0);
+                            stop-opacity:1">
+
+            </stop>
+        </linearGradient>
+    </defs>
+
+    <ellipse cx="200" cy="190" rx="85" ry="55"
+             style="fill:url(#orange_red)">
+
+    </ellipse>
+
+</svg>
 ```
 ![](http://7sbohv.com1.z0.glb.clouddn.com/lineargradient.png)
 
@@ -471,25 +471,25 @@ points 属性定义多边形每个角的 x 和 y 坐标
 #####垂直渐变：
 ```
 <svg width="100%" height="100%">
-        <defs>
-            <linearGradient id="orange_red" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" style="stop-color:rgb(255,0,0);
+    <defs>
+        <linearGradient id="orange_red" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:rgb(255,255,0);
                             stop-opacity:1">
 
-                </stop>
-                <stop offset="100%" style="stop-color:rgb(255,255,0);
+            </stop>
+            <stop offset="100%" style="stop-color:rgb(255,0,0);
                             stop-opacity:1">
 
-                </stop>
-            </linearGradient>
-        </defs>
+            </stop>
+        </linearGradient>
+    </defs>
 
-        <ellipse cx="200" cy="190" rx="85" ry="55"
-                 style="fill:url(#orange_red)">
+    <ellipse cx="200" cy="190" rx="85" ry="55"
+             style="fill:url(#orange_red)">
 
-        </ellipse>
+    </ellipse>
 
-    </svg>
+</svg>
 ```
 ![](http://7sbohv.com1.z0.glb.clouddn.com/verticalgradient.png)
 
@@ -501,26 +501,26 @@ points 属性定义多边形每个角的 x 和 y 坐标
 `<radialGradient>` 标签必须嵌套在 `<defs>` 中。`<defs>` 标签是 definitions 的缩写，它允许对诸如渐变等特殊元素进行定义。
 ```
 <svg width="100%" height="100%">
-        <defs>
-            <radialGradient id="grey_blue" cx="50%" cy="50%" r="50%"
-                            fx="50%" fy="50%">
-                <stop offset="0%" style="stop-color:rgb(200,200,200);
+    <defs>
+        <radialGradient id="grey_blue" cx="50%" cy="50%" r="50%"
+                        fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:rgb(200,200,200);
                         stop-opacity:0">
 
-                </stop>
-                <stop offset="100%" style="stop-color:rgb(0,0,255);
+            </stop>
+            <stop offset="100%" style="stop-color:rgb(0,0,255);
                         stop-opacity:1">
 
-                </stop>
-            </radialGradient>
-        </defs>
+            </stop>
+        </radialGradient>
+    </defs>
 
-        <ellipse cx="230" cy="200" rx="110" ry="100"
-                 style="fill:url(#grey_blue)">
+    <ellipse cx="230" cy="200" rx="110" ry="100"
+             style="fill:url(#grey_blue)">
 
-        </ellipse>
+    </ellipse>
 
-    </svg>
+</svg>
 ```
 ![](http://7sbohv.com1.z0.glb.clouddn.com/radialGradient.png)
 
@@ -535,25 +535,26 @@ ellipse 元素链接到此渐变，cx、cy 和 r 属性定义外圈，而 fx 和
 ####另外一个例子：
 ```
 <svg width="100%" height="100%">
-        <defs>
-            <radialGradient id="grey_blue" cx="20%" cy="40%" r="50%"
-                            fx="50%" fy="50%">
-                <stop offset="0%" style="stop-color:rgb(200,200,200);
+    <defs>
+        <radialGradient id="grey_blue" cx="20%" cy="40%" r="50%"
+                        fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:rgb(200,200,200);
                         stop-opacity:0">
 
-                </stop>
-                <stop offset="100%" style="stop-color:rgb(0,0,255);
+            </stop>
+            <stop offset="100%" style="stop-color:rgb(0,0,255);
                         stop-opacity:1">
 
-                </stop>
-            </radialGradient>
-        </defs>
+            </stop>
+        </radialGradient>
+    </defs>
 
-        <ellipse cx="230" cy="200" rx="110" ry="100"
-                 style="fill:url(#grey_blue)">
+    <ellipse cx="230" cy="200" rx="110" ry="100"
+             style="fill:url(#grey_blue)">
 
-        </ellipse>
+    </ellipse>
 
+</svg>
 ```
 ![](http://7sbohv.com1.z0.glb.clouddn.com/radialgradient2.png)
 
