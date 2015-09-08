@@ -161,3 +161,19 @@ fill-opacity:0.1;stroke-opacity:0.9;opacity:0.9"/>
 * CSS 的 fill-opacity 属性定义填充颜色透明度（合法的范围是：0 - 1）
 * CSS 的 stroke-opacity 属性定义笔触颜色的透明度（合法的范围是：0 - 1）
 * CSS 的 opacity 属性定义整个元素的透明值（合法的范围是：0 - 1）
+
+### `<circle>` 标签可用来创建一个圆
+```
+<svg width="100%" height="100%">
+
+    <circle cx="300" cy="60" r="50" stroke="#ff0" stroke-width="3" fill="red" >
+    </circle>
+s
+</svg>
+```
+[查看效果](http://codepen.io/xiaozhuzhu77/pen/gapWvy)
+
+代码解释：
+
+cx 和 cy 属性定义圆点的 x 和 y 坐标。如果省略 cx 和 cy，圆的中心会被设置为 (0, 0)
+r 属性定义圆的半径。
