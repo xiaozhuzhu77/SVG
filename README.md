@@ -147,7 +147,8 @@ SVG 有一些预定义的形状元素，可被开发者使用和操作：
 style="fill:red; stroke-width:5;stroke:black;
 fill-opacity:0.1;stroke-opacity:0.9;opacity:0.9"/>
 ```
-[查看效果](http://codepen.io/anon/pen/ojXWed)
+[查看源代码](http://codepen.io/anon/pen/ojXWed)
+![](http://7sbohv.com1.z0.glb.clouddn.com/rect.png)
 
 代码解释：
 * x 属性定义矩形的左侧位置（例如，x="0" 定义矩形到浏览器窗口左侧的距离是 0px）
@@ -162,16 +163,19 @@ fill-opacity:0.1;stroke-opacity:0.9;opacity:0.9"/>
 * CSS 的 stroke-opacity 属性定义笔触颜色的透明度（合法的范围是：0 - 1）
 * CSS 的 opacity 属性定义整个元素的透明值（合法的范围是：0 - 1）
 
-### `<circle>` 标签可用来创建一个圆
+### `<circle>` 标签
+`<circle>` 标签可用来创建一个圆
 ```
 <svg width="100%" height="100%">
 
     <circle cx="300" cy="60" r="50" stroke="#ff0" stroke-width="3" fill="red" >
     </circle>
-s
 </svg>
 ```
-[查看效果](http://codepen.io/xiaozhuzhu77/pen/gapWvy)
+[查看源代码](http://codepen.io/xiaozhuzhu77/pen/gapWvy)
+![](http://7sbohv.com1.z0.glb.clouddn.com/circle.png)
+
+
 
 代码解释：
 
