@@ -555,6 +555,6 @@ ellipse 元素链接到此渐变，cx、cy 和 r 属性定义外圈，而 fx 和
         </ellipse>
 
 ```
-![](http://7sbohv.com1.z0.glb.clouddn.com/radialGradient2.png)
+![](http://7sbohv.com1.z0.glb.clouddn.com/radialgradient2.png)
 
 [查看源代码](http://codepen.io/xiaozhuzhu77/pen/qOdPRV)
