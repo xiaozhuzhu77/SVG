@@ -138,3 +138,30 @@ codebase 属性指向下载插件的 URL。
 <iframe src="rect.svg" width="300" height="100">
 </iframe>
 ```
+
+##SVG 形状
+SVG 有一些预定义的形状元素，可被开发者使用和操作：
+
+```
+* 矩形 <rect>
+* 圆形 <circle>
+* 椭圆 <ellipse>
+* 线 <line>
+* 折线 <polyline>
+* 多边形 <polygon>
+* 路径 <path>
+```
+
+###`<rect>` 标签
+`<rect>` 标签可用来创建矩形，以及矩形的变种。
+```
+<rect width="300" height="100"
+style="fill:rgb(0,0,255);stroke-width:1;
+stroke:rgb(0,0,0)"/>
+```
+代码解释：
+* rect 元素的 width 和 height 属性可定义矩形的高度和宽度
+* style 属性用来定义 CSS 属性
+* CSS 的 fill 属性定义矩形的填充颜色（rgb 值、颜色名或者十六进制值）
+* CSS 的 stroke-width 属性定义矩形边框的宽度
+* CSS 的 stroke 属性定义矩形边框的颜色
