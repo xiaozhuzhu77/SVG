@@ -147,7 +147,8 @@ SVG 有一些预定义的形状元素，可被开发者使用和操作：
 style="fill:red; stroke-width:5;stroke:black;
 fill-opacity:0.1;stroke-opacity:0.9;opacity:0.9"/>
 ```
-[查看效果]<http://codepen.io/anon/pen/ojXWed>
+[查看效果]:  <http://codepen.io/anon/pen/ojXWed>  "查看 Demo"   
+
 代码解释：
 * x 属性定义矩形的左侧位置（例如，x="0" 定义矩形到浏览器窗口左侧的距离是 0px）
 * y 属性定义矩形的顶端位置（例如，y="0" 定义矩形到浏览器窗口顶端的距离是 0px）
