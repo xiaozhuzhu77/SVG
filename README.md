@@ -217,6 +217,8 @@ r 属性定义圆的半径。
 
 </svg>
 ```
+[查看源代码](http://codepen.io/xiaozhuzhu77/pen/JYdJom)
+
 代码解释：
 
 * x1 属性在 x 轴定义线条的开始
@@ -224,7 +226,7 @@ r 属性定义圆的半径。
 * x2 属性在 x 轴定义线条的结束
 * y2 属性在 y 轴定义线条的结束
 
-[查看源代码](http://codepen.io/xiaozhuzhu77/pen/JYdJom)
+
 
 ###`<polygon>` 标签
 `<polygon>` 标签用来创建含有不少于三个边的图形（即，多边形）。
@@ -240,7 +242,9 @@ r 属性定义圆的半径。
 </svg>
 ```
 ![](http://7sbohv.com1.z0.glb.clouddn.com/triangle.png)
+
 [查看源代码](http://codepen.io/xiaozhuzhu77/pen/MawoaO)
+
 points 属性定义多边形每个角的 x 和 y 坐标
 
 
