@@ -279,3 +279,62 @@ points 属性定义多边形每个角的 x 和 y 坐标
 ![](http://7sbohv.com1.z0.glb.clouddn.com/polygon.png)
 
 [查看源代码](http://codepen.io/xiaozhuzhu77/pen/zvGzZJ)
+
+###`<polyline>` 标签
+`<polyline>` 标签用来创建仅包含直线的形状。
+
+```
+<svg width="100%" height="100%">
+
+    <polyline points="0,0 0,20 20,20 20,40 40,40 40,60"
+              style="fill:white;stroke:red;stroke-width:2">
+
+    </polyline>
+
+</svg>
+```
+[查看效果](http://codepen.io/xiaozhuzhu77/pen/wKaqap)
+
+###`<path>` 标签
+`<path>` 标签用来定义路径。
+
+下面的命令可用于路径数据：
+* M = moveto 起始位置
+* L = lineto  直线
+* H = horizontal lineto 横向画线
+* V = vertical lineto 纵向画线
+* C = curveto 曲线
+* S = smooth curveto 平滑曲线
+* Q = quadratic Belzier curve 二次贝塞尔曲线
+* T = smooth quadratic Belzier curveto  平滑二次贝塞尔曲线
+* A = elliptical Arc 椭圆弧
+* Z = closepath 关闭路径
+
+#####注释：
+以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位。
+
+```
+<svg width="100%" height="100%">
+    <path d="M153 334
+            C153 334 151 334 151 334
+            C151 339 153 344 156 344
+            C164 344 171 339 171 334
+            C171 322 164 314 156 314
+            C142 314 131 322 131 334
+            C131 350 142 364 156 364
+            C175 364 191 350 191 334
+            C191 311 175 294 156 294
+            C131 294 111 311 111 334
+            C111 361 131 384 156 384
+            C186 384 211 361 211 334
+            C211 300 186 274 156 274"
+          style="fill:white;stroke:red;stroke-width:2">
+
+    </path>
+
+</svg>
+```
+![](http://7sbohv.com1.z0.glb.clouddn.com/path.png)
+
+[查看源代码](http://codepen.io/xiaozhuzhu77/pen/BoNdpY)
+
