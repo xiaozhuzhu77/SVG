@@ -277,4 +277,5 @@ points 属性定义多边形每个角的 x 和 y 坐标
 </div>
 ```
 ![](http://7sbohv.com1.z0.glb.clouddn.com/polygon.png)
+
 [查看源代码](http://codepen.io/xiaozhuzhu77/pen/zvGzZJ)
