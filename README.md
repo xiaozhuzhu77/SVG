@@ -147,9 +147,9 @@ SVG 有一些预定义的形状元素，可被开发者使用和操作：
 style="fill:red; stroke-width:5;stroke:black;
 fill-opacity:0.1;stroke-opacity:0.9;opacity:0.9"/>
 ```
-[查看源代码](http://codepen.io/anon/pen/ojXWed)
-
 ![](http://7sbohv.com1.z0.glb.clouddn.com/rect.png)
+
+[查看源代码](http://codepen.io/xiaozhuzhu77/pen/PPqmar)
 
 代码解释：
 * x 属性定义矩形的左侧位置（例如，x="0" 定义矩形到浏览器窗口左侧的距离是 0px）
@@ -173,13 +173,35 @@ fill-opacity:0.1;stroke-opacity:0.9;opacity:0.9"/>
     </circle>
 </svg>
 ```
-[查看源代码](http://codepen.io/xiaozhuzhu77/pen/gapWvy)
-
 ![](http://7sbohv.com1.z0.glb.clouddn.com/circle.png)
 
-
+[查看源代码](http://codepen.io/xiaozhuzhu77/pen/gapWvy)
 
 代码解释：
 
 cx 和 cy 属性定义圆点的 x 和 y 坐标。如果省略 cx 和 cy，圆的中心会被设置为 (0, 0)
 r 属性定义圆的半径。
+
+###`<ellipse>` 标签
+`<ellipse>` 标签可用来创建椭圆。椭圆与圆很相似。不同之处在于椭圆有不同的 x 和 y 半径，而圆的 x 和 y 半径是相同的。
+```
+ <svg width="100%" height="100%" >
+
+        <ellipse cx="300" cy="150" rx="200" ry="80"
+                 style="fill:rgb(200,100,50);
+                 stroke:rgb(0,0,100);stroke-width:2">
+
+        </ellipse>
+
+</svg>
+```
+![](http://7sbohv.com1.z0.glb.clouddn.com/ellipse.png)
+
+[查看源代码](http://codepen.io/xiaozhuzhu77/pen/MawoWv)
+
+代码解释：
+
+* cx 属性定义圆点的 x 坐标
+* cy 属性定义圆点的 y 坐标
+* rx 属性定义水平半径
+* ry 属性定义垂直半径
