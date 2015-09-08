@@ -225,3 +225,52 @@ r 属性定义圆的半径。
 * y2 属性在 y 轴定义线条的结束
 
 [查看源代码](http://codepen.io/xiaozhuzhu77/pen/JYdJom)
+
+###`<polygon>` 标签
+`<polygon>` 标签用来创建含有不少于三个边的图形（即，多边形）。
+```
+#### 三角形
+
+<svg width="100%" height="100%">
+
+    <polygon points="220,100 300,210 170,250"
+             style="fill:#cccccc;stroke:red;stroke-width:2; opacity: 0.5;">
+
+    </polygon>
+
+</svg>
+```
+![](http://7sbohv.com1.z0.glb.clouddn.com/triangle.png)
+[查看源代码](http://codepen.io/xiaozhuzhu77/pen/MawoaO)
+points 属性定义多边形每个角的 x 和 y 坐标
+
+
+####多边形
+```
+<div class="wrap">
+    <div class="clip-block">
+        <div class="clip-each clip-solid">
+            <div class="social-share-block">
+            </div>
+        </div>
+    </div>
+    <!-- /clip-block -->
+
+    <svg class="clip-svg">
+        <defs>
+            <clipPath id="hexagon-clip" clipPathUnits="objectBoundingBox">
+                <polygon points="0.25 0.05, 0.75 0.05, 1 0.5, 0.75 0.95, 0.25 0.95, 0 0.5" />
+            </clipPath>
+        </defs>
+    </svg>
+    <svg class="clip-svg">
+        <defs>
+            <clipPath id="triangle-clip" clipPathUnits="objectBoundingBox">
+                <polygon points="1 0.03, 0.17 1, 1 1" />
+            </clipPath>
+        </defs>
+    </svg>
+</div>
+```
+![](http://7sbohv.com1.z0.glb.clouddn.com/polygon.png)
+[查看源代码](http://codepen.io/xiaozhuzhu77/pen/zvGzZJ)
