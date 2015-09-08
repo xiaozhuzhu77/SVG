@@ -420,3 +420,80 @@ points 属性定义多边形每个角的 x 和 y 坐标
 
 
 [查看源代码](http://codepen.io/xiaozhuzhu77/pen/gapxJj)
+
+
+##SVG 渐变
+渐变是一种从一种颜色到另一种颜色的平滑过渡。另外，可以把多个颜色的过渡应用到同一个元素上。
+
+在 SVG 中，有两种主要的渐变类型：
+
+* 线性渐变
+* 放射性渐变
+
+###线性渐变
+`<linearGradient>` 可用来定义 SVG 的线性渐变。
+`<linearGradient>` 标签必须嵌套在 `<defs>` 的内部。`<defs>` 标签是 definitions 的缩写，它可对诸如渐变之类的特殊元素进行定义。
+
+线性渐变可被定义为水平、垂直或角形的渐变：
+* 当 y1 和 y2 相等，而 x1 和 x2 不同时，可创建水平渐变
+* 当 x1 和 x2 相等，而 y1 和 y2 不同时，可创建垂直渐变
+* 当 x1 和 x2 不同，且 y1 和 y2 不同时，可创建角形渐变
+
+#####水平渐变：
+
+```
+<svg width="100%" height="100%">
+        <defs>
+            <linearGradient id="orange_red" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(255,255,0);
+                            stop-opacity:1">
+    
+                </stop>
+                <stop offset="100%" style="stop-color:rgb(255,0,0);
+                            stop-opacity:1">
+    
+                </stop>
+            </linearGradient>
+        </defs>
+    
+        <ellipse cx="200" cy="190" rx="85" ry="55"
+                 style="fill:url(#orange_red)">
+    
+        </ellipse>
+
+    </svg>
+```
+![](http://7sbohv.com1.z0.glb.clouddn.com/lineargradient.png)
+
+
+[查看源代码](http://codepen.io/xiaozhuzhu77/pen/PPqJoy)
+
+#####垂直渐变：
+```
+<svg width="100%" height="100%">
+        <defs>
+            <linearGradient id="orange_red" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:rgb(255,0,0);
+                            stop-opacity:1">
+
+                </stop>
+                <stop offset="100%" style="stop-color:rgb(255,255,0);
+                            stop-opacity:1">
+
+                </stop>
+            </linearGradient>
+        </defs>
+
+        <ellipse cx="200" cy="190" rx="85" ry="55"
+                 style="fill:url(#orange_red)">
+
+        </ellipse>
+
+    </svg>
+```
+![](http://7sbohv.com1.z0.glb.clouddn.com/verticalgradient.png)
+
+
+[查看源代码](http://codepen.io/xiaozhuzhu77/pen/avOLOJ)
+
+
