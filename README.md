@@ -2,19 +2,17 @@
 
 ##  什么是SVG？
 
-```
 * SVG 指可伸缩矢量图形 (Scalable Vector Graphics)
 * SVG 用来定义用于网络的基于矢量的图形
 * SVG 使用 XML 格式定义图形
 * SVG 图像在放大或改变尺寸的情况下其图形质量不会有所损失
 * SVG 是万维网联盟的标准
 * SVG 与诸如 DOM 和 XSL 之类的 W3C 标准是一个整体
-```
 
 ## SVG 的优势
 
 与其他图像格式相比，使用 SVG 的优势在于：
-```
+
 * SVG 可被非常多的工具读取和修改（比如记事本）
 * SVG 与 JPEG 和 GIF 图像比起来，尺寸更小，且可压缩性更强。
 * SVG 是可伸缩的
@@ -24,7 +22,7 @@
 * SVG 可以与 Java 技术一起运行
 * SVG 是开放的标准
 * SVG 文件是纯粹的 XML
-```
+
 ## Canvas 和 SVG 的区别：
 
 ### SVG
@@ -108,8 +106,7 @@ SVG 文件可通过以下标签嵌入 HTML 文档：`<embed>`、`<object>` 或�
 
 ```
 <embed src="rect.svg" width="300" height="100" 
-type="image/svg+xml"
-pluginspage="http://www.adobe.com/svg/viewer/install/" />
+type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
 ```
 pluginspage 属性指向下载插件的 URL。
 
@@ -123,8 +120,7 @@ pluginspage 属性指向下载插件的 URL。
 #####语法：
 ```
 <object data="rect.svg" width="300" height="100" 
-type="image/svg+xml"
-codebase="http://www.adobe.com/svg/viewer/install/" />
+type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
 ```
 codebase 属性指向下载插件的 URL。
 
@@ -142,7 +138,6 @@ codebase 属性指向下载插件的 URL。
 ##SVG 形状
 SVG 有一些预定义的形状元素，可被开发者使用和操作：
 
-```
 * 矩形 <rect>
 * 圆形 <circle>
 * 椭圆 <ellipse>
@@ -150,14 +145,12 @@ SVG 有一些预定义的形状元素，可被开发者使用和操作：
 * 折线 <polyline>
 * 多边形 <polygon>
 * 路径 <path>
-```
 
 ###`<rect>` 标签
 `<rect>` 标签可用来创建矩形，以及矩形的变种。
 ```
 <rect width="300" height="100"
-style="fill:rgb(0,0,255);stroke-width:1;
-stroke:rgb(0,0,0)"/>
+style="fill:rgb(0,0,255); stroke-width:1; stroke:rgb(0,0,0)"/>
 ```
 代码解释：
 * rect 元素的 width 和 height 属性可定义矩形的高度和宽度
