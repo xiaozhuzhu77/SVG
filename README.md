@@ -338,3 +338,85 @@ points 属性定义多边形每个角的 x 和 y 坐标
 
 [查看源代码](http://codepen.io/xiaozhuzhu77/pen/BoNdpY)
 
+## SVG 滤镜
+在 SVG 中，必须在 `<defs>` 标签中定义 SVG 滤镜，可用的滤镜有：
+
+* feBlend
+* feColorMatrix
+* feComponentTransfer
+* feComposite
+* feConvolveMatrix
+* feDiffuseLighting
+* feDisplacementMap
+* feFlood
+* feGaussianBlur
+* feImage
+* feMerge
+* feMorphology
+* feOffset
+* feSpecularLighting
+* feTile
+* feTurbulence
+* feDistantLight
+* fePointLight
+* feSpotLight
+
+
+###高斯滤镜（Gaussian Blur）
+`<filter>` 标签用来定义 SVG 滤镜。<filter> 标签使用必需的 id 属性来定义向图形应用哪个滤镜？
+`<filter>` 标签必须嵌套在 `<defs>` 标签内。`<defs>` 标签是 definitions 的缩写，它允许对诸如滤镜等特殊元素进行定义。
+
+```
+<svg width="100%" height="100%">
+
+    <defs>
+        <filter id="Gaussian_Blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="3" >
+            </feGaussianBlur>
+        </filter>
+    </defs>
+
+    <ellipse cx="200" cy="150" rx="70" ry="40"
+             style="fill:#ff0000;stroke:#000000;
+             stroke-width:2;filter:url(#Gaussian_Blur)">
+
+    </ellipse>
+
+</svg>
+```
+![](http://7sbohv.com1.z0.glb.clouddn.com/filter1.png)
+
+[查看源代码](http://codepen.io/xiaozhuzhu77/pen/GpJvzd)
+
+####代码解释：
+* `<filter>` 标签的 id 属性可为滤镜定义一个唯一的名称（同一滤镜可被文档中的多个元素使用）
+* filter:url 属性用来把元素链接到滤镜。当链接滤镜 id 时，必须使用 # 字符
+* 滤镜效果是通过 `<feGaussianBlur>` 标签进行定义的。fe 后缀可用于所有的滤镜
+* `<feGaussianBlur>` 标签的 stdDeviation 属性可定义模糊的程度
+* in="SourceGraphic" 这个部分定义了由整个图像创建效果
+
+另一个 stdDeviation 值不同的例子:
+
+```
+<svg width="100%" height="100%">
+
+    <defs>
+        <filter id="Gaussian_Blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="20">
+
+            </feGaussianBlur>
+        </filter>
+    </defs>
+
+    <ellipse cx="200" cy="150" rx="70" ry="40"
+             style="fill:#ff0000;stroke:#000000;
+             stroke-width:2;filter:url(#Gaussian_Blur)">
+
+    </ellipse>
+
+</svg>
+```
+![](http://7sbohv.com1.z0.glb.clouddn.com/filter2.png)
+
+
+[查看源代码](http://codepen.io/xiaozhuzhu77/pen/gapxJj)
