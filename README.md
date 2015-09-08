@@ -205,3 +205,17 @@ r 属性定义圆的半径。
 * cy 属性定义圆点的 y 坐标
 * rx 属性定义水平半径
 * ry 属性定义垂直半径
+
+###`<line>` 标签
+`<line>` 标签用来创建线条。
+
+```
+<svg width="100%" height="100%">
+
+    <line x1="0" y1="0" x2="300" y2="300" style="stroke:rgb(99,99,99);
+    stroke-width:2"/>
+
+</svg>
+```
+
+[查看源代码](http://codepen.io/xiaozhuzhu77/pen/JYdJom)
