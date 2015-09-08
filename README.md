@@ -366,6 +366,157 @@ points 属性定义多边形每个角的 x 和 y 坐标
 * fePointLight
 * feSpotLight
 
+### feBlend
+```
+<svg width="100%" height="100%">
+
+    <defs> 
+        <linearGradient id="MyGradient" gradientUnits="userSpaceOnUse"
+                x1="100" y1="0" x2="300" y2="0"> 
+            <stop offset="0" style="stop-color:#000000"/> 
+            <stop offset=".67" style="stop-color:#ffff00"/> 
+            <stop offset="1" style="stop-color:#000000"/> 
+        </linearGradient> 
+        <filter id="normal"> 
+            <feBlend mode="normal" in2="BackgroundImage"/> 
+        </filter> 
+        <filter id="multiply"> 
+            <feBlend mode="multiply" in2="BackgroundImage"/> 
+        </filter> 
+        <filter id="screen"> 
+            <feBlend mode="screen" in2="BackgroundImage"/> 
+        </filter> 
+        <filter id="darken"> 
+            <feBlend mode="darken" in2="BackgroundImage"/> 
+        </filter> 
+        <filter id="lighten"> 
+            <feBlend mode="lighten" in2="BackgroundImage"/> 
+        </filter> 
+    </defs> 
+    
+    <g style="enable-background: new"> 
+        <rect x="40" y="20" width="300" height="450" 
+                style="fill:url(#MyGradient)"/> 
+        <g style="font-size:75;fill:#888888;fill-opacity:.6"> 
+            <text x="50" y="90" style="filter:url(#normal)">Normal</text> 
+            <text x="50" y="180" style="filter:url(#multiply)">Multiply</text> 
+            <text x="50" y="270" style="filter:url(#screen)">Screen</text> 
+            <text x="50" y="360" style="filter:url(#darken)">Darken</text> 
+            <text x="50" y="450" style="filter:url(#lighten)">Lighten</text> 
+        </g> 
+    </g>
+
+</svg>
+```
+
+###feColorMatrix
+```
+<svg width="100%" height="100%">
+
+    <defs> 
+        <linearGradient id="MyGrad" gradientUnits="userSpaceOnUse" x1="100" y1="0" x2="500" y2="0"> 
+            <stop offset="0" style="stop-color:#ff00ff"/> 
+            <stop offset=".33" style="stop-color:#88ff88"/> 
+            <stop offset=".67" style="stop-color:#2020ff"/> 
+            <stop offset="1" style="stop-color:#d00000"/> 
+        </linearGradient> 
+        <filter id="Matrix"> 
+            <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/> 
+        </filter> 
+        <filter id="Saturate"> 
+            <feColorMatrix type="saturate" values="0.4"/> 
+        </filter> 
+        <filter id="HueRotate"> 
+            <feColorMatrix type="hueRotate" values="90"/> 
+        </filter> 
+        <filter id="Luminance"> 
+            <feColorMatrix type="luminanceToAlpha" result="a"/> 
+            <feComposite in="SourceGraphic" in2="a" operator="in"/> 
+        </filter> 
+    </defs> 
+    
+    <g style="font-size:50;fill:url(#MyGrad)">
+        <text x="50" y="60">Unfiltered</text> 
+        <text x="50" y="120" style="filter:url(#Matrix)">Matrix</text> 
+        <text x="50" y="180" style="filter:url(#Saturate)">Saturate</text> 
+        <text x="50" y="240" style="filter:url(#HueRotate)">HueRotate</text> 
+        <text x="50" y="300" style="filter:url(#Luminance)">Luminance</text> 
+    </g> 
+</svg>
+```
+###feComponentTransfer
+```
+<svg width="100%" height="100%">
+
+    <defs>
+        <linearGradient id="MyGrad" gradientUnits="userSpaceOnUse" x1="50" y1="0" x2="600" y2="0">
+            <stop offset="0" stop-color="#ff0000" />
+            <stop offset=".33" stop-color="#00ff00" />
+            <stop offset=".67" stop-color="#0000ff" />
+            <stop offset="1" stop-color="#000000" />
+        </linearGradient>
+        
+        <filter id="Identity">
+            <feComponentTransfer>
+                    <feFuncR type="identity"/>
+                    <feFuncG type="identity"/>
+                    <feFuncB type="identity"/>
+                    <feFuncA type="identity"/>
+              </feComponentTransfer>
+        </filter>
+        <filter id="Table">
+            <feComponentTransfer>
+                    <feFuncR type="table" tableValues="0 0 1 1"/>
+                    <feFuncG type="table" tableValues="1 1 0 0"/>
+                    <feFuncB type="table" tableValues="0 1 1 0"/>
+                </feComponentTransfer>
+        </filter>
+        <filter id="Linear">
+            <feComponentTransfer>
+                    <feFuncR type="linear" slope=".5" intercept=".25"/>
+                    <feFuncG type="linear" slope=".5" intercept="0"/>
+                    <feFuncB type="linear" slope=".5" intercept=".5"/>
+            </feComponentTransfer>
+        </filter>
+        <filter id="Gamma">
+            <feComponentTransfer>
+                    <feFuncR type="gamma" amplitude="2" exponent="5" offset="0"/>
+                    <feFuncG type="gamma" amplitude="2" exponent="3" offset="0"/>
+                    <feFuncB type="gamma" amplitude="2" exponent="1" offset="0"/>
+            </feComponentTransfer>
+        </filter>
+    </defs>
+    
+    <g font-size="50" font-weight="bold" fill="url(#MyGrad)">
+        <text x="50" y="60" filter="url(#Identity)">Identity</text>
+        <text x="50" y="120" filter="url(#Table)">TableLookup</text>
+        <text x="50" y="180" filter="url(#Linear)">LinearFunc</text>
+        <text x="50" y="240" filter="url(#Gamma)">GammaFunc</text>
+    </g>
+</svg>
+
+
+```
+
+
+###feOffset
+```
+<svg width="100%" height="100%">
+
+    <defs>
+        <filter id="filter" x="0" y="0">
+            <feGaussianBlur stdDeviation="5"/>
+            <feOffset dx="5" dy="5"/>
+        </filter>
+    </defs>
+    
+    <rect width="90" height="90" fill="grey" filter="url(#filter)"/>
+    <rect width="90" height="90" fill="yellow" stroke="black"/>
+
+</svg>
+
+```
+
 
 ###高斯滤镜（Gaussian Blur）
 `<filter>` 标签用来定义 SVG 滤镜。<filter> 标签使用必需的 id 属性来定义向图形应用哪个滤镜？
@@ -421,6 +572,74 @@ points 属性定义多边形每个角的 x 和 y 坐标
 
 [查看源代码](http://codepen.io/xiaozhuzhu77/pen/gapxJj)
 
+###feMerge
+```
+<svg width="100%" height="100%">
+
+    <defs>
+        <filter id="test" filterUnits="objectBoundingBox" x="0" y="0" width="1.5"
+                height="4">
+        
+            <feOffset result="Off1" dx="15" dy="20"/>
+            <feFlood style="flood-color:#ff0000;flood-opacity:0.8"/>
+            <feComposite in2="Off1" operator="in" result="C1"/>
+        
+            <feOffset in="SourceGraphic" result="Off2" dx="30" dy="40"/>
+            <feFlood style="flood-color:#ff0000;flood-opacity:0.4"/>
+            <feComposite in2="Off2" operator="in" result="C2"/>
+        
+            <feMerge>
+                <feMergeNode in="C2"/>
+                <feMergeNode in="C1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    
+    <text x="30" y="100" style="font:36px verdana bold;fill:blue;
+            filter:url(#test)">This is some text!</text>
+
+</svg>
+```
+###feMorphology
+```
+<svg width="100%" height="100%">
+
+    <defs>
+        <filter id="Erode1">
+            <feMorphology operator="erode" in="SourceGraphic" radius="1"/>
+        </filter>
+        <filter id="Erode3">
+            <feMorphology operator="erode" in="SourceGraphic" radius="3"/>
+        </filter>
+        <filter id="Erode4">
+            <feMorphology operator="erode" in="SourceGraphic" radius="4"/>
+        </filter>
+        <filter id="Dilate1">
+            <feMorphology operator="dilate" in="SourceGraphic" radius="1"/>
+        </filter>
+        <filter id="Dilate3">
+            <feMorphology operator="dilate" in="SourceGraphic" radius="3"/>
+        </filter>
+        <filter id="Dilate4">
+            <feMorphology operator="dilate" in="SourceGraphic" radius="4"/>
+        </filter>
+    </defs>
+    
+    <g enable-background="new">
+        <g font-family="Verdana" font-size="50" stroke="red" stroke-width="4">
+            <text x="50" y="60">Unfiltered</text>
+            <text x="50" y="120" filter="url(#Erode1)">Erode 1</text>
+            <text x="50" y="180" filter="url(#Erode3)">Erode 3</text>
+            <text x="50" y="240" filter="url(#Erode4)">Erode 4</text>
+            <text x="50" y="300" filter="url(#Dilate1)">Dilate 1</text>
+            <text x="50" y="360" filter="url(#Dilate3)">Dilate 3</text>
+            <text x="50" y="420" filter="url(#Dilate4)">Dilate 4</text>
+        </g>
+    </g>
+
+</svg>
+```
 
 ##SVG 渐变
 渐变是一种从一种颜色到另一种颜色的平滑过渡。另外，可以把多个颜色的过渡应用到同一个元素上。
