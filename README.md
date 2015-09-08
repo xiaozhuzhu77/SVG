@@ -408,7 +408,9 @@ points 属性定义多边形每个角的 x 和 y 坐标
 
 </svg>
 ```
-[](http://www.w3school.com.cn/svg/feblend_1.svg)
+[](http://7sbohv.com1.z0.glb.clouddn.com/feblend.png)
+
+[查看效果](http://codepen.io/xiaozhuzhu77/pen/Xmbeoz)
 
 ###feColorMatrix
 ```
@@ -445,6 +447,10 @@ points 属性定义多边形每个角的 x 和 y 坐标
     </g> 
 </svg>
 ```
+[](http://7sbohv.com1.z0.glb.clouddn.com/fecolormatrix.png)
+
+[查看效果](http://codepen.io/xiaozhuzhu77/pen/KdpXJN)
+
 ###feComponentTransfer
 ```
 <svg width="100%" height="100%">
@@ -495,9 +501,10 @@ points 属性定义多边形每个角的 x 和 y 坐标
         <text x="50" y="240" filter="url(#Gamma)">GammaFunc</text>
     </g>
 </svg>
-
-
 ```
+[](http://7sbohv.com1.z0.glb.clouddn.com/fecomponenttransfer.png)
+
+[查看效果](http://codepen.io/xiaozhuzhu77/pen/qOdPgy)
 
 
 ###feOffset
@@ -602,6 +609,10 @@ points 属性定义多边形每个角的 x 和 y 坐标
 
 </svg>
 ```
+[](http://7sbohv.com1.z0.glb.clouddn.com/femerge.png)
+
+[查看效果](http://codepen.io/xiaozhuzhu77/pen/bVdoZV)
+
 ###feMorphology
 ```
 <svg width="100%" height="100%">
@@ -641,6 +652,9 @@ points 属性定义多边形每个角的 x 和 y 坐标
 
 </svg>
 ```
+[](http://7sbohv.com1.z0.glb.clouddn.com/femorphology.png)
+
+[查看效果](http://codepen.io/xiaozhuzhu77/pen/rOVGRG)
 
 ##SVG 渐变
 渐变是一种从一种颜色到另一种颜色的平滑过渡。另外，可以把多个颜色的过渡应用到同一个元素上。
