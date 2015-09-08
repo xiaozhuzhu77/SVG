@@ -43,11 +43,11 @@
 * Canvas 是逐像素进行渲染的。
 * 在 canvas 中，一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。
 * 特点：
-*    依赖分辨率
-*    不支持事件处理器
-*    弱的文本渲染能力
-*    能够以 .png 或 .jpg 格式保存结果图像
-*    最适合图像密集型的游戏，其中的许多对象会被频繁重绘
+    * 依赖分辨率
+    * 不支持事件处理器
+    * 弱的文本渲染能力
+    * 能够以 .png 或 .jpg 格式保存结果图像
+    * 最适合图像密集型的游戏，其中的许多对象会被频繁重绘
 
 SVG 的主要竞争者是 Flash。
 与 Flash 相比，SVG 最大的优势是与其他标准（比如 XSL 和 DOM）相兼容。而 Flash 则是未开源的私有技术。
@@ -72,7 +72,7 @@ stroke-width="2" fill="red"/>
 第一行包含了 XML 声明。请注意 standalone 属性！该属性规定此 SVG 文件是否是“独立的”，或含有对外部文件的引用。
 standalone="no" 意味着 SVG 文档会引用一个外部文件 - 在这里，是 DTD 文件。     
 
-第二和第三行引用了这个外部的 SVG DTD。该 DTD 位于 “http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd”。 该 DTD 位于 W3C，含有所有允许的 SVG 元素。      
+第二和第三行引用了这个外部的 SVG DTD。该 DTD 位于 <http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd/>。 该 DTD 位于 W3C，含有所有允许的 SVG 元素。      
 
 SVG 代码以 `<svg>` 元素开始，包括开启标签 <svg> 和关闭标签 `</svg>` 。这是根元素。width 和 height 属性可设置此 SVG 文档的宽度和高度。version 属性可定义所使用的 SVG 版本，xmlns 属性可定义 SVG 命名空间。   
 
@@ -143,12 +143,20 @@ SVG 有一些预定义的形状元素，可被开发者使用和操作：
 ###`<rect>` 标签
 `<rect>` 标签可用来创建矩形，以及矩形的变种。
 ```
-<rect width="300" height="100"
-style="fill:rgb(0,0,255); stroke-width:1; stroke:rgb(0,0,0)"/>
+<rect x="200" y="200" width="300" height="300" rx="20" ry="20" 
+style="fill:red; stroke-width:5;stroke:black;
+fill-opacity:0.1;stroke-opacity:0.9;opacity:0.9"/>
 ```
+[查看效果]<http://codepen.io/anon/pen/ojXWed>
 代码解释：
+* x 属性定义矩形的左侧位置（例如，x="0" 定义矩形到浏览器窗口左侧的距离是 0px）
+* y 属性定义矩形的顶端位置（例如，y="0" 定义矩形到浏览器窗口顶端的距离是 0px）
 * rect 元素的 width 和 height 属性可定义矩形的高度和宽度
+* rx 和 ry 属性可使矩形产生圆角
 * style 属性用来定义 CSS 属性
 * CSS 的 fill 属性定义矩形的填充颜色（rgb 值、颜色名或者十六进制值）
 * CSS 的 stroke-width 属性定义矩形边框的宽度
 * CSS 的 stroke 属性定义矩形边框的颜色
+* CSS 的 fill-opacity 属性定义填充颜色透明度（合法的范围是：0 - 1）
+* CSS 的 stroke-opacity 属性定义笔触颜色的透明度（合法的范围是：0 - 1）
+* CSS 的 opacity 属性定义整个元素的透明值（合法的范围是：0 - 1）
