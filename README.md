@@ -252,8 +252,6 @@ points 属性定义多边形每个角的 x 和 y 坐标
 <div class="wrap">
     <div class="clip-block">
         <div class="clip-each clip-solid">
-            <div class="social-share-block">
-            </div>
         </div>
     </div>
     <!-- /clip-block -->
@@ -268,7 +266,6 @@ points 属性定义多边形每个角的 x 和 y 坐标
         </defs>
         
     </svg>
-    
     
     <svg class="clip-svg">
     
@@ -342,6 +339,86 @@ points 属性定义多边形每个角的 x 和 y 坐标
 ![](http://7sbohv.com1.z0.glb.clouddn.com/path.png)
 
 [查看源代码](http://codepen.io/xiaozhuzhu77/pen/BoNdpY)
+
+
+###SVG Stroke 属性
+所有stroke属性，可应用于任何种类的线条，文字和元素就像一个圆的轮廓。
+* stroke
+* stroke-width
+* stroke-linecap
+* stroke-dasharray
+
+####SVG stroke 属性
+```
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <g fill="none">
+    <path stroke="red" d="M5 20 l215 0" />
+    <path stroke="blue" d="M5 40 l215 0" />
+    <path stroke="black" d="M5 60 l215 0" />
+  </g>
+</svg>
+```
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <g fill="none">
+    <path stroke="red" d="M5 20 l215 0" />
+    <path stroke="blue" d="M5 40 l215 0" />
+    <path stroke="black" d="M5 60 l215 0" />
+  </g>
+</svg>
+
+####SVG stroke-width 属性
+```
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <g fill="none" stroke="black">
+    <path stroke-width="2" d="M5 20 l215 0" />
+    <path stroke-width="4" d="M5 40 l215 0" />
+    <path stroke-width="6" d="M5 60 l215 0" />
+  </g>
+</svg>
+```
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <g fill="none" stroke="black">
+    <path stroke-width="2" d="M5 20 l215 0" />
+    <path stroke-width="4" d="M5 40 l215 0" />
+    <path stroke-width="6" d="M5 60 l215 0" />
+  </g>
+</svg>
+
+####SVG stroke-linecap 属性
+```
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <g fill="none" stroke="black" stroke-width="6">
+    <path stroke-linecap="butt" d="M5 20 l215 0" />
+    <path stroke-linecap="round" d="M5 40 l215 0" />
+    <path stroke-linecap="square" d="M5 60 l215 0" />
+  </g>
+</svg>
+```
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <g fill="none" stroke="black" stroke-width="6">
+    <path stroke-linecap="butt" d="M5 20 l215 0" />
+    <path stroke-linecap="round" d="M5 40 l215 0" />
+    <path stroke-linecap="square" d="M5 60 l215 0" />
+  </g>
+</svg>
+
+####SVG stroke-dasharray 属性
+```
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <g fill="none" stroke="black" stroke-width="4">
+    <path stroke-dasharray="5,5" d="M5 20 l215 0" />
+    <path stroke-dasharray="10,10" d="M5 40 l215 0" />
+    <path stroke-dasharray="20,10,5,5,5,10" d="M5 60 l215 0" />
+  </g>
+</svg>
+```
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <g fill="none" stroke="black" stroke-width="4">
+    <path stroke-dasharray="5,5" d="M5 20 l215 0" />
+    <path stroke-dasharray="10,10" d="M5 40 l215 0" />
+    <path stroke-dasharray="20,10,5,5,5,10" d="M5 60 l215 0" />
+  </g>
+</svg>
 
 ## SVG 滤镜
 在 SVG 中，必须在 `<defs>` 标签中定义 SVG 滤镜，可用的滤镜有：
